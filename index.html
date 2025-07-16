@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interi - Interiors & Homeware</title>
+  <style>
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9f9f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c3e50;
+      color: #f9f9f7;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+    nav a {
+      color: #f9f9f7;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #1abc9c;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #1abc9c;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+    .intro-text {
+      max-width: 700px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    /* Shop grid */
+    .shop-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+      gap: 1.5rem;
+    }
+    .shop-item {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    .shop-item:hover {
+      box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+    }
+    .shop-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+    .shop-item h3 {
+      margin-bottom: 0.5rem;
+    }
+    .shop-item p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .btn-buy {
+      background: #1abc9c;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+    .btn-buy:hover {
+      background: #16a085;
+    }
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 200px;
+    }
+    /* Blog */
+    .blog-post {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+    .blog-post h3 {
+      margin-bottom: 0.5rem;
+    }
+    .blog-post p {
+      color: #555;
+      font-size: 1rem;
+    }
+    /* Contact form */
+    form {
+      max-width: 500px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    form button {
+      background: #1abc9c;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #16a085;
+    }
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #f9f9f7;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+    /* Responsive */
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      .gallery-grid img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interi</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h2>Welcome to Interi</h2>
+      <p class="intro-text">Discover modern interior designs and beautiful homeware that bring comfort and style to your living spaces. Explore our curated collections, get inspired by our gallery, and read our latest decor tips.</p>
+    </section>
+    <section id="about">
+      <h2>About Interi</h2>
+      <p>At Interi, we believe that your home should be a reflection of your personality and comfort. Our mission is to provide you with exquisite interior design ideas and high-quality homeware products that transform your space into a cozy haven. Whether you're looking for inspiration or ready to shop, Interi is your go-to destination.</p>
+    </section>
+    <section id="shop">
+      <h2>Shop Our Favorites</h2>
+      <div class="shop-items">
+        <div class="shop-item">
+          <img src="https://images.unsplash.com/photo-1505692794401-0bbef07d1c48?auto=format&fit=crop&w=400&q=80" alt="Decorative Vase" />
+          <h3>Elegant Decorative Vase</h3>
+          <p>Perfect for adding a touch of sophistication to any room.</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="shop-item">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=400&q=80" alt="Cozy Throw Blanket" />
+          <h3>Cozy Throw Blanket</h3>
+          <p>Soft and warm, ideal for relaxing evenings at home.</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+        <div class="shop-item">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=400&q=80" alt="Modern Lamp" />
+          <h3>Modern Table Lamp</h3>
+          <p>Brighten up your space with style and functionality.</p>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80" alt="Living Room Design" />
+        <img src="https://images.unsplash.com/photo-1501183638714-44b64f0d9b17?auto=format&fit=crop&w=600&q=80" alt="Cozy Bedroom" />
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Kitchen Interior" />
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80" alt="Decor Details" />
+      </div>
+    </section>
+    <section id="blog">
+      <h2>From Our Blog</h2>
+      <article class="blog-post">
+        <h3>5 Tips to Make Your Home Cozy This Winter</h3>
+        <p>Winter is the perfect time to create a warm, inviting space. Discover simple ways to add comfort with throws, lighting, and textures.</p>
+      </article>
+      <article class="blog-post">
+        <h3>How to Choose the Right Colors for Your Living Room</h3>
+        <p>Color can transform a space. Learn how to pick palettes that bring harmony and style to your interiors.</p>
+      </article>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Interi. All rights reserved.</p>
+    <p>Subscribe to our newsletter for the latest updates.</p>
+  </footer>
+</body>
+</html>
